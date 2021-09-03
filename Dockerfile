@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.9
 
 # FROM debian
 # RUN apt-get update 
