@@ -1,10 +1,6 @@
 pipeline {
     def application
-    agent {
-        docker {
-            image 'python:3.9'
-        }
-    } 
+    agent any
     stages {
         stage('Build') {
             steps {
