@@ -1,9 +1,12 @@
 pipeline {
-    agent any 
+    agent {
+        docker {
+            image 'python:3.9'
+        }
+    } 
     stages {
         stage('Build') {
             steps {
-                sh 'sudo apt install python pip -y'
                 sh 'pip install -r requiremennts.txt'
                 sh 'python app.py'
             }
