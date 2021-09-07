@@ -1,5 +1,5 @@
 pipeline {
-    agent {
+    agent any {
         sh 'apt install python pip'
     } 
     stages {
