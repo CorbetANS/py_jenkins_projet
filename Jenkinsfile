@@ -1,10 +1,9 @@
 pipeline {
-    agent any {
-        sh 'apt install python pip'
-    } 
+    agent any 
     stages {
         stage('Build') {
             steps {
+                sh 'apt install python pip'
                 sh 'pip install -r requiremennts.txt'
                 sh 'python app.py'
             }
