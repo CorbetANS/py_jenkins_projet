@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'apt install python pip'
+                sh 'sudo apt install python pip -y'
                 sh 'pip install -r requiremennts.txt'
                 sh 'python app.py'
             }
