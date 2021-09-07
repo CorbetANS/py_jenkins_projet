@@ -1,5 +1,4 @@
 pipeline {
-    def application
     agent any
     stages {
         stage('Build') {
