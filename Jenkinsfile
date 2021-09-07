@@ -1,11 +1,14 @@
 pipeline {
+    def application
     agent {
-        sh 'apt install python pip'
+        docker {
+            image 'python:3.9'
+        }
     } 
     stages {
         stage('Build') {
             steps {
-                sh 'pip install -r requiremennts.txt'
+                sh 'pip install -r requirements.txt'
                 sh 'python app.py'
             }
         }
